@@ -1,0 +1,21 @@
+import random
+# list of possible responses from 8ball
+responses = ["Yes", "No", "Maybe", "Not sure", "Try again later", "Signs point to yes", "Signs point to no", "It's up to you","Absolutely.", "Aboslutely Not."]
+def ask_question():
+    # gets the user's question
+    question = input("Ask the magic 8 ball a question: ")
+    # generates a random response
+    response = random.choice(responses)
+    # prints the response
+    print(f"The magic 8 ball says: {response}")
+# this is the main loop
+while True:
+    # play the game
+    ask_question()
+    # play again?
+    play_again = input("Would you like to play again? (y/n): ")
+    # if the user doesn't want to play again, break out of the loop
+    if play_again != "y":
+        break
+# goodbye message
+print("Goodbye!")
